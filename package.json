@@ -1,5 +1,5 @@
 {
-  "name": "@x-spacy/kafka",
+  "name": "@x-spacy/validators",
   "version": "0.0.0",
   "description": "Validators extension for class-validator lib",
   "license": "MIT",
