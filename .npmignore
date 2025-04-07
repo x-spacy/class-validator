@@ -1,7 +1,5 @@
 .github/
 
-@types/
-
 node_modules/
 scripts/
 src/
