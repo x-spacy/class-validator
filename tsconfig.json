@@ -2,14 +2,13 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "CommonJS",
-
     "outDir": "dist",
     "baseUrl": "src",
-
     "paths": {
-      "@x-spacy/validators/*": [ "*" ]
+      "@x-spacy/class-validator/*": [
+        "*"
+      ]
     },
-
     "strict": true,
     "skipLibCheck": true,
     "removeComments": true,

@@ -1,4 +1,4 @@
-declare module '@x-spacy/validators' {
+declare module '@x-spacy/class-validator' {
   export enum DocumentTypeEnum {
     CPF = 'CPF',
     CNPJ = 'CNPJ'

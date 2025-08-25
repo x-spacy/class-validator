@@ -1,13 +1,13 @@
 import {
-  registerDecorator,
-  ValidationArguments,
-  ValidationOptions
+    registerDecorator,
+    ValidationArguments,
+    ValidationOptions
 } from 'class-validator';
 
-import { IsCNPJ } from '@x-spacy/validators/services/IsCNPJ';
-import { IsCPF } from '@x-spacy/validators/services/IsCPF';
+import { IsCNPJ } from '@x-spacy/class-validator/services/IsCNPJ';
+import { IsCPF } from '@x-spacy/class-validator/services/IsCPF';
 
-import { DocumentTypeEnum } from '@x-spacy/validators/enums/DocumentTypeEnum';
+import { DocumentTypeEnum } from '@x-spacy/class-validator/enums/DocumentTypeEnum';
 
 export function IsDocument(isDocumentOptions: { type: DocumentTypeEnum }, validationOptions?: ValidationOptions) {
   return function (object: Object, propertyName: string) {

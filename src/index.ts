@@ -1,9 +1,9 @@
-export * from '@x-spacy/validators/decorators/IsDocument';
+export * from '@x-spacy/class-validator/decorators/IsDocument';
 
-export * from '@x-spacy/validators/enums/DocumentTypeEnum';
+export * from '@x-spacy/class-validator/enums/DocumentTypeEnum';
 
-export * from '@x-spacy/validators/services/IsCNPJ';
+export * from '@x-spacy/class-validator/services/IsCNPJ';
 
-export * from '@x-spacy/validators/services/IsCPF';
+export * from '@x-spacy/class-validator/services/IsCPF';
 
 export * from 'class-validator';
