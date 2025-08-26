@@ -1,4 +1,4 @@
-export function IsCNPJ(document: string) {
+export function isCNPJ(document: string) {
   if (document.length !== 14) {
     return false;
   }

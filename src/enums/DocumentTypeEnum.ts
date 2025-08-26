@@ -1,4 +1,7 @@
 export enum DocumentTypeEnum {
   CPF = 'CPF',
-  CNPJ = 'CNPJ'
+  CNPJ = 'CNPJ',
+  CRN = 'CRN',
+  CREF = 'CREF',
+  CRM = 'CRM'
 }

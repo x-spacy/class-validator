@@ -1,11 +1,14 @@
 import {
-    registerDecorator,
-    ValidationArguments,
-    ValidationOptions
+  registerDecorator,
+  ValidationArguments,
+  ValidationOptions
 } from 'class-validator';
 
-import { IsCNPJ } from '@x-spacy/class-validator/services/IsCNPJ';
-import { IsCPF } from '@x-spacy/class-validator/services/IsCPF';
+import { isCNPJ } from '@x-spacy/class-validator/services/IsCNPJ';
+import { isCPF } from '@x-spacy/class-validator/services/IsCPF';
+import { isCREF } from '@x-spacy/class-validator/services/IsCREF';
+import { isCRM } from '@x-spacy/class-validator/services/IsCRM';
+import { isCRN } from '@x-spacy/class-validator/services/IsCRN';
 
 import { DocumentTypeEnum } from '@x-spacy/class-validator/enums/DocumentTypeEnum';
 
@@ -24,10 +27,19 @@ export function IsDocument(isDocumentOptions: { type: DocumentTypeEnum }, valida
 
           switch (isDocumentOptions.type) {
             case DocumentTypeEnum.CPF: {
-              return IsCPF(document);
+              return isCPF(document);
             }
             case DocumentTypeEnum.CNPJ: {
-              return IsCNPJ(document);
+              return isCNPJ(document);
+            }
+            case DocumentTypeEnum.CRN: {
+              return isCRN(document);
+            }
+            case DocumentTypeEnum.CREF: {
+              return isCREF(document);
+            }
+            case DocumentTypeEnum.CRM: {
+              return isCRM(document);
             }
             default: {
               return false;

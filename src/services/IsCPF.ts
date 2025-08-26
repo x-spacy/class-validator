@@ -1,4 +1,4 @@
-export function IsCPF(document: string) {
+export function isCPF(document: string) {
   if (document.length !== 11) {
     return false;
   }
