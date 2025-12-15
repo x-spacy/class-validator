@@ -1,4 +1,6 @@
 export function isCNPJ(document: string) {
+  document = document.replace(/[^0-9]/g, '');
+
   if (document.length !== 14) {
     return false;
   }

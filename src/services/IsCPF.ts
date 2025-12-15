@@ -1,4 +1,6 @@
 export function isCPF(document: string) {
+  document = document.replace(/[^0-9]/g, '');
+
   if (document.length !== 11) {
     return false;
   }
