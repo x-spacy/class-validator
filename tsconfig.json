@@ -3,10 +3,9 @@
     "target": "ES6",
     "module": "CommonJS",
     "outDir": "dist",
-    "baseUrl": "src",
     "paths": {
       "@x-spacy/class-validator/*": [
-        "*"
+        "./src/"
       ]
     },
     "strict": true,
