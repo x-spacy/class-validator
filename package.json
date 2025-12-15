@@ -1,6 +1,6 @@
 {
   "name": "@x-spacy/class-validator",
-  "version": "0.0.0",
+  "version": "1.4.2",
   "description": "Validators extension for class-validator lib",
   "license": "MIT",
   "private": false,
