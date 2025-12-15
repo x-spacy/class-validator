@@ -3,7 +3,7 @@ declare module '@x-spacy/class-validator' {
 
   export declare function isCPF(document: string): boolean;
 
-  export declare function IsRG(document: string): boolean;
+  export declare function isRG(document: string): boolean;
 
   export declare function isCREF(document: string): boolean;
 
