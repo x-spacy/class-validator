@@ -11,6 +11,7 @@ import { isCPF } from '@x-spacy/class-validator/services/IsCPF';
 import { isCREF } from '@x-spacy/class-validator/services/IsCREF';
 import { isCRM } from '@x-spacy/class-validator/services/IsCRM';
 import { isCRN } from '@x-spacy/class-validator/services/IsCRN';
+import { isRG } from '@x-spacy/class-validator/services/IsRG';
 
 import { DocumentTypeEnum } from '@x-spacy/class-validator/enums/DocumentTypeEnum';
 
@@ -41,6 +42,9 @@ export class IsDocumentConstraint implements ValidatorConstraintInterface {
       }
       case DocumentTypeEnum.CRM: {
         return isCRM(document);
+      }
+      case DocumentTypeEnum.RG: {
+        return isRG(document);
       }
       default: {
         return false;

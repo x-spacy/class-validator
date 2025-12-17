@@ -1,4 +1,4 @@
-export function IsRG(document: string): boolean {
+export function isRG(document: string): boolean {
   document = document.replace(/[^0-9]/g, '');
 
   if (document.length !== 9) {
