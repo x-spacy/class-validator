@@ -108,9 +108,6 @@ dist
 # Library
 bin/
 
-# Visual Studio Code
-.vscode/
-
 # MacOS files
 .DS_Store
 
@@ -134,16 +131,52 @@ build/
 
 tmp/
 
+# Python
+
 datasets/
 
 _modelo_jobilib_/
 
 __pycache__/
 
+# Tesseract
+
 *.traineddata
 
+# SQL
+
 *.sql
+
+!prisma/**/*.sql
+
+# CSV/XLS/XLSX
 
 *.csv
 *.xls
 *.xlsx
+
+# Terraform
+
+.terraform/
+
+.terraform.lock.*
+
+*.tfvars
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# CSharp
+
+bin/
+obj/
+
+# Text
+
+*.txt
+
+# TanStack
+
+.tanstack
+
+.cta.json
