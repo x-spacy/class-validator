@@ -7,25 +7,19 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22.13.1
-          registry-url: https://registry.npmjs.org/
-
-      - name: Setup package manager
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
+          bun-version: 1.3.9
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Configure git user email
         run: git config --global user.email "${{ github.event.release.author.email }}"
@@ -34,15 +28,12 @@ jobs:
         run: git config --global user.name "${{ github.event.release.author.login }}"
 
       - name: Change package version
-        run: pnpm version ${{ github.event.release.tag_name }}
-
-      - name: Install @nestjs/cli globally
-        run: npm i -g @nestjs/cli
+        run: bun pm version ${{ github.event.release.tag_name }} --no-git-checks
 
       - name: Build package and bundle source
-        run: pnpm build
+        run: bun run build
 
       - name: Publish package to registry
-        run: pnpm publish --no-git-checks
+        run: bun publish --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}

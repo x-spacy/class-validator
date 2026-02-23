@@ -1,17 +1,17 @@
-export * from '@x-spacy/class-validator/decorators/IsDocument';
+export * from './decorators/IsDocument';
 
-export * from '@x-spacy/class-validator/enums/DocumentTypeEnum';
+export * from './enums/DocumentTypeEnum';
 
-export * from '@x-spacy/class-validator/services/IsCNPJ';
+export * from './services/IsCNPJ';
 
-export * from '@x-spacy/class-validator/services/IsCPF';
+export * from './services/IsCPF';
 
-export * from '@x-spacy/class-validator/services/IsRG';
+export * from './services/IsRG';
 
-export * from '@x-spacy/class-validator/services/IsCREF';
+export * from './services/IsCREF';
 
-export * from '@x-spacy/class-validator/services/IsCRM';
+export * from './services/IsCRM';
 
-export * from '@x-spacy/class-validator/services/IsCRN';
+export * from './services/IsCRN';
 
 export * from 'class-validator';

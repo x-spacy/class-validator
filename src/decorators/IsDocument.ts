@@ -6,14 +6,13 @@ import {
   ValidatorConstraintInterface
 } from 'class-validator';
 
-import { isCNPJ } from '@x-spacy/class-validator/services/IsCNPJ';
-import { isCPF } from '@x-spacy/class-validator/services/IsCPF';
-import { isCREF } from '@x-spacy/class-validator/services/IsCREF';
-import { isCRM } from '@x-spacy/class-validator/services/IsCRM';
-import { isCRN } from '@x-spacy/class-validator/services/IsCRN';
-import { isRG } from '@x-spacy/class-validator/services/IsRG';
-
-import { DocumentTypeEnum } from '@x-spacy/class-validator/enums/DocumentTypeEnum';
+import { DocumentTypeEnum } from '../enums/DocumentTypeEnum';
+import { isCNPJ } from '../services/IsCNPJ';
+import { isCPF } from '../services/IsCPF';
+import { isCREF } from '../services/IsCREF';
+import { isCRM } from '../services/IsCRM';
+import { isCRN } from '../services/IsCRN';
+import { isRG } from '../services/IsRG';
 
 @ValidatorConstraint({ name: 'IsDocument', async: false })
 export class IsDocumentConstraint implements ValidatorConstraintInterface {

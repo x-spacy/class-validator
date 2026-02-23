@@ -1,16 +1,20 @@
 export function isRG(document: string): boolean {
   document = document.replace(/[^0-9]/g, '');
 
-  if (document.length !== 9) {
+  if (document.length < 7) {
     return false;
+  }
+
+  if (!/^\d+$/.test(document)) {
+    return false;
+  }
+
+  if (document.length < 9) {
+    return true;
   }
 
   const digits = document.substring(0, 8);
   const firstVerifier = document.charAt(8);
-
-  if (!/^\d{8}$/.test(digits)) {
-    return false;
-  }
 
   const weights = [ 2, 3, 4, 5, 6, 7, 8, 9 ];
 
